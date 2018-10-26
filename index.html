@@ -15,7 +15,6 @@
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 30%;
   z-index: 1;
 }
 
@@ -41,18 +40,7 @@
 
   <div class="text-wrapper">
     <h1>Fluid Aspect Ratio</h2>
-    <p>Move from a minimum viewport width of 320px and an aspect ratio of 16:9, to a maximum viewport of 1200px and an aspect ratio of 5:1.</p>
-
-    <h4><b>Targets:</b> At 320px wide, with an aspect of 16:9 the container should be 320 x 180px.<br>
-      At 1200px wide, with an aspect of 4:1 the container should be 1200 x 300px.</h4>
-
-    <h3>The problem: </h3>
-    <p>A small viewport demands an image that is more rectangular &mdash; and we typically use the 16:9 aspect ratio for 320px wide screens. Wider viewports, however, need an image size that is less tall in order that content can remain visible. Since most laptops have a 16:9 widescreen aspect ratio, we need something even more dramatic. Here, I target a 4:1 ratio for 1200px wide screens. </p>
-    <h3>The goal:</h3>
-    <p>Move fluidly from the 16:9 aspect ratio up to a 4:1 aspect ratio without using multiple media queries, resulting in a &ldquo;stepped&rdquo; effect when the media query abruptly changes the height of the containing element. </p>
-    <h3>The solution:</h3>
-    <p>CSS&rsquo;s new <code>calc()</code> function can use dynamic units like viewport units to create a measurement that constantly changes. Thanks you, thank you, thank you to <a href="https://twitter.com/timbrown">Tim Brown</a> for his <a href="https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/">in-depth article and crazy math around fluid line-heights</a>.</p>
-
+    
     <h2>How does this work?</h2>
   <h3>
 <h1>Chicks,eggs,shot eggs,games,puzzle games,hand-eye coordination,control games,pass time games<h1>
@@ -71,20 +59,8 @@ Let me protect my home.
   <pre><code>height: calc($min-height + ($max-height - $min-height) * ((100vw - $min-width)/($max-width - $min-width)))</code></pre>
     <p>And further, if I were to break this down into reusable <abbr title="Syntactically Awesome Style Sheets">SASS</abbr> logic:</p>
 
-  <pre><code>$min-width: 320px;
-  $min-aspect: 16 9;
-  $min-height: $min-width * (nth($min-aspect, 2) / nth($min-aspect, 1));
-  $max-width: 1200px;
-  $max-aspect: 4 1;
-  $max-height: $max-width * (nth($max-aspect, 2) / nth($max-aspect, 1));
-  .element {
-  min-height: $min-height;
-  height: calc(#{$min-height} + (#{$max-height} - #{$min-height}) * ((100vw - #{$min-width})/(#{$max-width} - #{$min-width})));
-  max-height: $max-height;
-  }</code></pre>
-
-    <p>Again, big thanks to <a href="https://twitter.com/timbrown">Tim Brown</a> for the start on this crazy calculus.<br>
-      Authored by <a href="https://twitter.com/artinruins">J. Hogue</a> at <a href="http://www.oomphinc.com">Oomph, Inc.</a></p>
+  
+    <p>Chicken shot egg</p>
   </div>
 </div>
 <script>
