@@ -54,16 +54,19 @@
     <p>CSS&rsquo;s new <code>calc()</code> function can use dynamic units like viewport units to create a measurement that constantly changes. Thanks you, thank you, thank you to <a href="https://twitter.com/timbrown">Tim Brown</a> for his <a href="https://blog.typekit.com/2016/08/17/flexible-typography-with-css-locks/">in-depth article and crazy math around fluid line-heights</a>.</p>
 
     <h2>How does this work?</h2>
-  <pre><code>min-height: 180px;
-  height: calc(180px + (300 - 180) * ((100vw - 320px)/(1200 - 320)));
-  max-height: 300px;</code></pre>
-    <p>Think of it as portions to the left and right of the multiplication sign &mdash; left is heights, right is widths:</p>
-    <ul>
-      <li><b>180px</b> is our minimum height at our smallest viewport width</li>
-      <li><b>(300 - 180)</b> is the difference between our max-height and our min-height for the image container</li>
-      <li><b>(100vw - 320px)</b> is the viewport width minus the smallest breakpoint width. We use <code>px</code> here so that the result resolves to a unit</li>
-      <li><b>(1200 - 320)</b> is the maximum viewport width minus the minimum viewport width</li>
-    </ul>
+  <h3>
+<h1>Chicks,eggs,shot eggs,games,puzzle games,hand-eye coordination,control games,pass time games<h1>
+
+Chicks eliminate the tens of thousands of eggs
+
+Move left and right, launch the chicken bullets
+
+Protect your home, don't let the eggs outside go to your own site.
+
+Will appear randomly in the devil
+
+Let me protect my home.
+      </h3>
     <p>If I were to break it down into <abbr title="Syntactically Awesome Style Sheets">SASS</abbr> variables, it might look something like this:</p>
   <pre><code>height: calc($min-height + ($max-height - $min-height) * ((100vw - $min-width)/($max-width - $min-width)))</code></pre>
     <p>And further, if I were to break this down into reusable <abbr title="Syntactically Awesome Style Sheets">SASS</abbr> logic:</p>
